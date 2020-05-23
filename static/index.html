@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js "></script>
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="left">
+      <select id="numSel">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <button id="saveBtn">ZAPISZ NA SERWERZE</button>
+      <button id="loadBtn">WCZYTAJ Z SERWERA</button>
+      <a href="/hex">
+        <button>HEX</button>
+      </a>
+      <a href="/game">
+        <button>GAME</button>
+      </a>
+      <button class="typeBtn" style="background-color: green;">WALLS</button>
+      <button class="typeBtn">ENEMY</button>
+      <button class="typeBtn">TREASURE</button>
+      <button class="typeBtn">LIGHT</button>
+      <button class="typeBtn">ALLY</button>
+    </div>
+    <div id="jsonDiv">
+      <textarea id="jsonText"></textarea>
+    </div>
+    <div id="box"></div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "hex",
+  "version": "1.0.0",
+  "description": "Projekt hex aplikacje klienckie 2020",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "csscomb": "^4.3.0",
+    "eslint": "^7.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Eryk Dziedzic",
+  "license": "ISC"
+}
