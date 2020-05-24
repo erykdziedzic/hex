@@ -2,22 +2,21 @@ class Light {
   constructor(scene, color) {
     this.scene = scene
     this.color = color
-
     this.container = new THREE.Object3D()
 
-    this.init()
+    this.createLight()
     return this.container
   }
 
-  init() {
+  createLight() {
     this.light = new THREE.PointLight(this.color, 2, 300, Math.PI / 8)
     this.light.intensity = 2.5
     this.light.position.y = 100
 
     this.container.add(this.light)
 
-    var meshGeometry = new THREE.BoxGeometry(20, 20, 20)
-    var meshMaterial = new THREE.MeshBasicMaterial({
+    const meshGeometry = new THREE.BoxGeometry(20, 20, 20)
+    const meshMaterial = new THREE.MeshBasicMaterial({
       color: 0xffff00,
       side: THREE.DoubleSide,
     })

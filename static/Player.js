@@ -5,7 +5,7 @@ class Player {
     this.player = null
     var that = this
 
-    this.model.loadModel('models/homer.js', 'mats/homer.jpg', function (
+    this.model.loadModel('models/devil.js', 'mats/devil.png', function (
       modeldata
     ) {
       console.log('model został załadowany', modeldata)

@@ -41,6 +41,8 @@ class Model {
   }
 
   stopAnimation() {
-    this.mixer.stopAllAction()
+    if (this.mixer) {
+      this.mixer.stopAllAction()
+    }
   }
 }

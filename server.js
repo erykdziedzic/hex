@@ -22,6 +22,14 @@ app.get('/hex', function (req, res) {
   res.sendFile(path.join(__dirname, '/static/hex.html'))
 })
 
+app.get('/player', function (req, res) {
+  res.sendFile(path.join(__dirname, '/static/player.html'))
+})
+
+app.get('/ally', function (req, res) {
+  res.sendFile(path.join(__dirname, '/static/ally.html'))
+})
+
 const collection = new Datastore({
   filename: 'level.db',
   autoload: true,

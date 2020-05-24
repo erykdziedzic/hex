@@ -175,11 +175,6 @@ function renderMap(data) {
       const intersects = raycaster.intersectObjects(scene.children, true)
 
       if (intersects.length > 0) {
-        // for (let ally in settings.allies) {
-        //     if (settings.allies[ally].getAllyMesh() == intersects[0].object && !settings.playersAllies.includes(settings.allies[ally])) {
-        //         settings.playersAllies.push(settings.allies[ally])
-        //     }
-        // }
         clickedVect = intersects[0].point
         clickedVect.y = 20
 

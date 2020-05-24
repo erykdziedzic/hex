@@ -5,16 +5,20 @@ class Ally {
     this.ally = null
     this.ringExists = false
 
-    this.model.loadModel('models/alien.js', 'mats/alien.jpg', (modeldata) => {
-      this.ally = modeldata
-      this.container.add(this.ally)
-      this.ally.rotation.y = (3 * Math.PI) / 2
+    this.model.loadModel(
+      'models/skeleton.js',
+      'mats/skeleton.png',
+      (modeldata) => {
+        this.ally = modeldata
+        this.container.add(this.ally)
+        this.ally.rotation.y = (3 * Math.PI) / 2
 
-      const axes = new THREE.AxesHelper(200)
-      axes.rotation.y = Math.PI
+        const axes = new THREE.AxesHelper(200)
+        axes.rotation.y = Math.PI
 
-      this.ally.add(axes)
-    })
+        this.ally.add(axes)
+      }
+    )
   }
 
   setRing() {
@@ -45,6 +49,8 @@ class Ally {
   }
 
   getAllyMesh() {
-    return this.ally.children[0]
+    if (this.ally) {
+      return this.ally.children[0]
+    }
   }
 }
