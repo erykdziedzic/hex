@@ -13,6 +13,11 @@ class Ally {
         this.container.add(this.ally)
         this.ally.rotation.y = (3 * Math.PI) / 2
 
+        const light = new Light()
+        light.position.set(0, 100, 0)
+        this.container.add(light)
+        settings.lights.push(light)
+
         const axes = new THREE.AxesHelper(200)
         axes.rotation.y = Math.PI
 

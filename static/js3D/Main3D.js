@@ -101,11 +101,6 @@ function renderMap(data) {
       }
     }
 
-    const orbitControl = new THREE.OrbitControls(camera, renderer.domElement)
-    orbitControl.addEventListener('change', function () {
-      renderer.render(scene, camera)
-    })
-
     const player = new Player()
     scene.add(player.getPlayerCont())
 

@@ -14,15 +14,6 @@ class Light {
     this.light.position.y = 100
 
     this.container.add(this.light)
-
-    const meshGeometry = new THREE.BoxGeometry(20, 20, 20)
-    const meshMaterial = new THREE.MeshBasicMaterial({
-      color: 0xffff00,
-      side: THREE.DoubleSide,
-    })
-    this.mesh = new THREE.Mesh(meshGeometry, meshMaterial)
-
-    this.container.add(this.mesh)
   }
 
   getLight() {

@@ -45,8 +45,12 @@ app.get('/level', async (req, res) => {
   collection.find({}, (error, data) => {
     if (error) res.status(500).end()
     const response = data[0]
-    delete response._id
-    res.json(data[0])
+    if (response) {
+      delete response._id
+      res.json(data[0])
+    } else {
+      res.status(404).end(JSON.stringify({ error: 'no_level' }))
+    }
   })
 })
 

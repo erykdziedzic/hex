@@ -14,6 +14,11 @@ class Player {
 
       that.container.add(that.player) // kontener w którym jest player
 
+      const light = new Light()
+      light.position.set(0, 100, 0)
+      that.container.add(light)
+      settings.lights.push(light)
+
       that.player.rotation.y = (3 * Math.PI) / 2
 
       that.axes = new THREE.AxesHelper(200) // osie konieczne do kontroli kierunku ruchu

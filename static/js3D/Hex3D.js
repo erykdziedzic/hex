@@ -114,6 +114,16 @@ class Hex3D {
   createLight() {
     const light = new Light()
     light.position.set(0, 100, 0)
+
+    const meshGeometry = new THREE.BoxGeometry(20, 20, 20)
+    const meshMaterial = new THREE.MeshBasicMaterial({
+      color: 0xffff00,
+      side: THREE.DoubleSide,
+    })
+    const mesh = new THREE.Mesh(meshGeometry, meshMaterial)
+
+    light.add(mesh)
+
     this.container.add(light)
     settings.lights.push(light)
   }

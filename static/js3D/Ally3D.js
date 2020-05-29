@@ -67,7 +67,7 @@ function createPlayer() {
       this.scene.add(ally.getAllyCont())
       ally
         .getAllyCont()
-        .position.set(Math.random() * 1000 - 500, 0, Math.random() * 1000 - 500)
+        .position.set(Math.random() * 500 - 250, 0, Math.random() * 500 - 250)
 
       $(document).on('mouseup', () => {
         moveAvailable = false

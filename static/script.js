@@ -64,6 +64,7 @@ class HexBoard {
   }
 
   loadBoardData(data) {
+    if (!data || data.error) return
     $('#numSel').val(data.size)
     this.resetBoard()
     this.levelData = data

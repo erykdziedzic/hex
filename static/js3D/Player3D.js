@@ -14,7 +14,6 @@ function createPlayer() {
     constructor() {
       this.createScene()
       this.createPlane()
-      this.createOrbitContols()
       this.createPlayer()
     }
 
@@ -45,16 +44,6 @@ function createPlayer() {
       const plane = new Mesh(geometry, material)
       plane.position.set(0, 0, 0)
       this.scene.add(plane)
-    }
-
-    createOrbitContols() {
-      const orbitControl = new OrbitControls(
-        this.camera,
-        this.renderer.domElement
-      )
-      orbitControl.addEventListener('change', () =>
-        this.renderer.render(this.scene, this.camera)
-      )
     }
 
     createPlayer() {
